@@ -52,64 +52,39 @@
 
         <section id="bitacora" class="section container">
             <div class="center-title">
-                <h2 class="section-title">Bitácora de Interacciones Colaborativas</h2>
+                <h2 class="section-title">Bitácora de Decisiones Colaborativas</h2>
             </div>
             
-            <div class="decision-card">
-                <h4 id="equipo-h4">Equipo del Proyecto</h4>
+            <h3>Principales Acuerdos del Equipo</h3>
+            <br>
+            <div class="bitacora-content">
+                <div class="decision-card">
+                    <h4>Decisión de Arquitectura (Sprint Planning)</h4>
+                    <p class="contexto">Luis (Equipo Técnico) presentó dos opciones para la HU-005: procesar los ángulos en el visor (Unity) o en el servidor.</p>
+                    <p class="decision"><strong>Decisión:</strong> El equipo acordó procesar los datos crudos en el visor (Unity) y enviar solo el ángulo calculado (ej. "85 grados") a la API.</p>
+                    <p class="justificacion"><strong>Justificación:</strong> María (PO) argumentó que la necesidad inmediata es la respuesta en tiempo real para el terapeuta (HU-004). Un retraso (latencia) en el cálculo del servidor haría inútil el panel. Se crea una tarjeta en Trello para mover esta lógica al servidor en un sprint futuro.</p>
+                </div>
+
+                <div class="decision-card">
+                    <h4>Manejo de Impedimento (Sprint Retrospective)</h4>
+                    <p class="contexto">Problema: Durante el Sprint, Luis (Equipo Técnico) reportó que el cálculo del ángulo (HU-005) tenía una fluctuación (ruido) de +/- 5 grados.</p>
+                    <p class="decision"><strong>Decisión:</strong> Yosue (SM) facilitó una reunión de emergencia. Se descubrió que el problema era la falta de una "fase de calibración". Se acordó añadir una nueva Historia de Usuario obligatoria para el próximo Sprint: "Como paciente, quiero una pantalla de calibración inicial de 10 segundos".</p>
+                    <p class="justificacion"><strong>Intervención:</strong> Yosue (SM) vio la tarjeta bloqueada en Trello y facilitó la reunión entre Luis y un Fisioterapeuta (Socio Clave). Creó la tarjeta en Trello inmediatamente.</p>
+                </div>
+
+                <div class="decision-card">
+                    <h4>Acuerdo de Prioridad (Sprint Planning)</h4>
+                    <p class="contexto">María (PO) quería añadir una historia para "gamificar" el movimiento. Luis (Equipo Técnico) advirtió que esto era demasiado trabajo junto con la creación de la API (HU-006) y el pipeline de CI/CD (HU-008).</p>
+                    <p class="decision"><strong>Decisión:</strong> Yosue (SM) facilitó la negociación. El equipo acordó que el "Seguimiento Preciso" y la "Automatización" (HUs 004-008) eran la base técnica y la prioridad. La "Gamificación" se movió al Sprint 3.</p>
+                </div>
+                
                 <br>
-                <h5 style="color: var(--color-accent-primary); font-size: 1.2rem;">Equipo Central</h5>
-                <ul class="tools-list" style="margin-top: 10px;">
-                    <li>Ing. María Castro</li>
-                    <li>Ing. Yosue Piña</li>
-                    <li>Ing. Luis Segovia</li>
-                </ul>
+                <h3>Herramientas Aplicadas</h3>
                 <br>
-                <h5 style="color: var(--color-accent-primary); font-size: 1.2rem;">Equipo Multidisciplinario</h5>
-                <ul class="tools-list" style="margin-top: 10px;">
-                    <li>Fisioterapeutas</li>
-                    <li>Psicólogos</li>
-                    <li>Desarrolladores de Videojuegos</li>
-                    <li>Ingenieros de RV</li>
-                </ul>
-            </div>
-
-            <br>
-
-            <div class="decision-card">
-                <h4>1. Principales Acuerdos del Equipo</h4>
-                <p class="contexto">Para gestionar nuestro proyecto de "terapia gamificada" y asegurar que la "tecnología esté al servicio de la recuperación", hemos establecido los siguientes acuerdos:</p>
-                <ul class="tools-list" style="margin-top: 15px;">
-                    <li><strong>Herramienta Central:</strong> Trello será nuestra única fuente de verdad para la gestión de tareas.</li>
-                    <li><strong>Comunicación Diaria:</strong> Usaremos Slack para comunicaciones rápidas y asíncronas (#reborn-vr-equipo).</li>
-                    <li><strong>Repositorio de Documentos:</strong> Google Drive será nuestro repositorio oficial para toda la documentación validada.</li>
-                    <li><strong>Definición de "HECHO":</strong> Ninguna tarea se mueve a "HECHO" sin pasar por "EN REVISIÓN" y ser validada por un Fisioterapeuta/Psicólogo y un Ingeniero.</li>
-                    <li><strong>Roles del Sprint:</strong> Rotación de un "Scrum Master" (facilitador) en cada Sprint para dirigir reuniones y eliminar impedimentos.</li>
-                </ul>
-            </div>
-
-            <br>
-
-            <div class="decision-card">
-                <h4>2. Hitos Principales (Logros del Sprint 0)</h4>
-                <ul class="tools-list" style="margin-top: 15px;">
-                    <li><strong>Visión Aprobada:</strong> Se validó la visión estratégica: "transformar la obligación terapéutica en motivación intrínseca".</li>
-                    <li><strong>Logo y Narrativa Creados:</strong> Se diseñó y aprobó el "Elemento Simbólico" (Insignia del Renacimiento Digital).</li>
-                    <li><strong>Perfiles de Usuario Validados:</strong> Se completó el documento de "User Personas", validado por psicólogos y pacientes.</li>
-                    <li><strong>KPIs Clínicos Definidos:</strong> Se aprobó el documento de "Métricas Clínicas Clave" que la plataforma debe capturar.</li>
-                    <li><strong>Arquitectura Aprobada:</strong> Se aprobó el diagrama de arquitectura de software inicial, enfocado en la "escalabilidad horizontal".</li>
-                </ul>
-            </div>
-
-            <br>
-
-            <div class="decision-card">
-                <h4>3. Reflexión sobre Liderazgo y Comunicación</h4>
-                <ul class="tools-list" style="margin-top: 15px;">
-                    <li><strong>Liderazgo:</strong> El liderazgo compartido entre los 3 Product Owners (Castro, Piña, Segovia) es efectivo para la estrategia. Se identificó la necesidad de un "líder técnico" (Ingeniero de RV) para unificar decisiones de desarrollo.</li>
-                    <li><strong>Comunicación:</strong> La fortaleza del equipo es su "fusión de talento". La comunicación entre ingenieros y el equipo de salud (Fisioterapeutas/Psicólogos) es el mayor desafío y, a la vez, la mayor victoria.</li>
-                    <li><strong>Desafío Identificado:</strong> "Traducir" los requisitos clínicos a especificaciones técnicas claras para los desarrolladores de videojuegos.</li>
-                    <li><strong>Acción de Mejora:</strong> Implementar "sesiones de validación cruzada" dos veces por semana, donde un fisioterapeuta pruebe prototipos "EN PROGRESO" para dar feedback inmediato.</li>
+                <ul class="tools-list">
+                    <li><strong>Google Meet:</strong> Utilizado para todas las ceremonias ágiles (Planning, Review, Retrospective).</li>
+                    <li><strong>Trello:</strong> Usado para documentar decisiones, dividir historias en tareas y gestionar el backlog (ej. mover "gamificación" al próximo sprint).</li>
+                    <li><strong>GitHub Actions:</strong> Empleado para implementar el pipeline de CI/CD acordado en la HU-008 para la automatización.</li>
                 </ul>
             </div>
         </section>
@@ -142,7 +117,7 @@
                 </div>
                 
                 <div class="agile-diagram">
-                    <h4 id="diagrama-h4">Nuestro Ciclo de Desarrollo Ágil (Scrum)</h4>
+                    <h4>Nuestro Ciclo de Desarrollo Ágil (Scrum)</h4>
                     <div class="scrum-process">
                         <div class="scrum-phase">
                             <h5>1. Product Backlog</h5>
