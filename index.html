@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Misión 2: Reborn VR - Brigada Reborn</title>
+    
+
+</head>
+<body>
+
+    <header class="header">
+        <div class="container navbar">
+            <a href="#inicio" class="nav-logo">REBORN <span>VR</span></a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+                    <li><a href="#bitacora" class="nav-link">Bitácora</a></li>
+                    <li><a href="#presentacion" class="nav-link">Presentación</a></li>
+                    <li><a href="#simbolo" class="nav-link">Símbolo</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <section id="inicio" class="section container">
+            <img src="Imagen1.png" alt="Logo Reborn VR" class="main-logo">
+            <h1>REBORN VR</h1>
+            <p>Team Brigada Reborn</p>
+            
+            <div class="team-grid">
+                <div class="team-card">
+                    <img src="Imagen2.png" alt="Foto de María Castro">
+                    <h3>María Castro</h3>
+                    <p>Product Owner</p>
+                </div>
+                <div class="team-card">
+                    <img src="Imagen3.png" alt="Foto de Yosue Piña">
+                    <h3>Yosue Piña</h3>
+                    <p>Scrum Master</p>
+                </div>
+                <div class="team-card">
+                    <img src="Imagen4.png" alt="Foto de Luis Segovia">
+                    <h3>Luis Segovia</h3>
+                    <p>Desarrollador</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="bitacora" class="section container">
+            <div class="center-title">
+                <h2 class="section-title">Bitácora de Decisiones Colaborativas</h2>
+            </div>
+            
+            <h3>Principales Acuerdos del Equipo</h3>
+            <br>
+            <div class="bitacora-content">
+                <div class="decision-card">
+                    <h4>Decisión de Arquitectura (Sprint Planning)</h4>
+                    <p class="contexto">Luis (Equipo Técnico) presentó dos opciones para la HU-005: procesar los ángulos en el visor (Unity) o en el servidor.</p>
+                    <p class="decision"><strong>Decisión:</strong> El equipo acordó procesar los datos crudos en el visor (Unity) y enviar solo el ángulo calculado (ej. "85 grados") a la API.</p>
+                    <p class="justificacion"><strong>Justificación:</strong> María (PO) argumentó que la necesidad inmediata es la respuesta en tiempo real para el terapeuta (HU-004). Un retraso (latencia) en el cálculo del servidor haría inútil el panel. Se crea una tarjeta en Trello para mover esta lógica al servidor en un sprint futuro.</p>
+                </div>
+
+                <div class="decision-card">
+                    <h4>Manejo de Impedimento (Sprint Retrospective)</h4>
+                    <p class="contexto">Problema: Durante el Sprint, Luis (Equipo Técnico) reportó que el cálculo del ángulo (HU-005) tenía una fluctuación (ruido) de +/- 5 grados.</p>
+                    <p class="decision"><strong>Decisión:</strong> Yosue (SM) facilitó una reunión de emergencia. Se descubrió que el problema era la falta de una "fase de calibración". Se acordó añadir una nueva Historia de Usuario obligatoria para el próximo Sprint: "Como paciente, quiero una pantalla de calibración inicial de 10 segundos".</p>
+                    <p class="justificacion"><strong>Intervención:</strong> Yosue (SM) vio la tarjeta bloqueada en Trello y facilitó la reunión entre Luis y un Fisioterapeuta (Socio Clave). Creó la tarjeta en Trello inmediatamente.</p>
+                </div>
+
+                <div class="decision-card">
+                    <h4>Acuerdo de Prioridad (Sprint Planning)</h4>
+                    <p class="contexto">María (PO) quería añadir una historia para "gamificar" el movimiento. Luis (Equipo Técnico) advirtió que esto era demasiado trabajo junto con la creación de la API (HU-006) y el pipeline de CI/CD (HU-008).</p>
+                    <p class="decision"><strong>Decisión:</strong> Yosue (SM) facilitó la negociación. El equipo acordó que el "Seguimiento Preciso" y la "Automatización" (HUs 004-008) eran la base técnica y la prioridad. La "Gamificación" se movió al Sprint 3.</p>
+                </div>
+                
+                <br>
+                <h3>Herramientas Aplicadas</h3>
+                <br>
+                <ul class="tools-list">
+                    <li><strong>Google Meet:</strong> Utilizado para todas las ceremonias ágiles (Planning, Review, Retrospective).</li>
+                    <li><strong>Trello:</strong> Usado para documentar decisiones, dividir historias en tareas y gestionar el backlog (ej. mover "gamificación" al próximo sprint).</li>
+                    <li><strong>GitHub Actions:</strong> Empleado para implementar el pipeline de CI/CD acordado en la HU-008 para la automatización.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="presentacion" class="section container">
+            <div class="center-title">
+                <h2 class="section-title">Presentación Simbólica</h2>
+            </div>
+
+            <h3>Narrativa del Proyecto (El Propósito)</h3>
+            <br>
+            <blockquote class="narrative-quote">
+                <p>"Buenos días. Somos la Brigada REBORN:</p>
+                <p>Honorables compañeros... venimos a hablarles de esperanza... Todos conocemos la cruda realidad de la rehabilitación física: un camino largo, solitario y desmoralizante... El resultado es la deserción. Pacientes que abandonan sus terapias no por falta de voluntad, sino porque el proceso les roba la motivación.</p>
+                <p>Nuestro proyecto, Reborn VR, nace de una pregunta: ¿Y si la terapia no fuera una obligación que se soporta, sino una experiencia que se espera?</p>
+                <p>Con Reborn VR, el paciente no está en una clínica fría; está en un bosque místico, usando su movimiento para hacer crecer un árbol de luz. No está haciendo una repetición dolorosa; está ayudando a un fénix digital a alzar el vuelo, un fénix que simboliza su propio renacimiento.</p>
+                <p>A través de la Realidad Virtual... reconecta con su propósito y su voluntad de sanar... No estamos construyendo solo un software, estamos usando la tecnología más avanzada para construir un puente de regreso a la vida. Eso es Reborn VR."</p>
+            </blockquote>
+            
+            <br><br><br>
+            <h3>Justificación Metodológica</h3>
+            <br>
+            <div class="metodologia-grid">
+                <div>
+                    <ul class="metodologia-list">
+                        <li><strong>Metodologías Ágiles (Scrum):</strong> No definimos un plan de 5 años. Definimos un MVP ("terapia gamificada con seguimiento preciso"). Trabajamos en Sprints de 2 semanas con roles claros (PO, SM, Técnico) para entregar valor y adaptarnos semanalmente.</li>
+                        <li><strong>Herramientas de Colaboración:</strong> Nuestra clave es la fusión de talento. El equipo técnico (Luis) trabaja directamente con los Fisioterapeutas (Socios Clave). Usamos Trello para visibilidad total y un pipeline de CI/CD para asegurar la integración del software con los Visores de RV.</li>
+                        <li><strong>Gestión de Equipos (Agilidad en Acción):</strong> Cuando se detectó "ruido" en los datos (un bloqueo crítico), el Scrum Master (Yosue) no abrió un ticket: convocó una sesión de emergencia en Google Meet. En 30 minutos, el experto clínico diagnosticó el problema: falta de "calibración". Se creó una nueva historia, se priorizó y se resolvió el bloqueo. Así gestionamos equipos: integrando su experiencia en tiempo real.</li>
+                    </ul>
+                </div>
+                
+                <div class="agile-diagram">
+                    <h4>Nuestro Ciclo de Desarrollo Ágil (Scrum)</h4>
+                    <div class="scrum-process">
+                        <div class="scrum-phase">
+                            <h5>1. Product Backlog</h5>
+                            <p>Lista priorizada de funcionalidades y requisitos del proyecto (Historias de Usuario).</p>
+                        </div>
+                        <span class="scrum-arrow">→</span>
+                        <div class="scrum-phase">
+                            <h5>2. Sprint Planning</h5>
+                            <p>El equipo selecciona elementos del Product Backlog para el próximo Sprint y define cómo construirlos.</p>
+                        </div>
+                        <span class="scrum-arrow">→</span>
+                        <div class="scrum-phase">
+                            <h5>3. Sprint (2 Semanas)</h5>
+                            <p>Desarrollo iterativo donde el equipo convierte los requisitos en un incremento de producto funcional.</p>
+                            <p>• Daily Scrums</p>
+                        </div>
+                        <span class="scrum-arrow">→</span>
+                        <div class="scrum-phase">
+                            <h5>4. Incremento Funcional</h5>
+                            <p>Versión utilizable del producto al final de cada Sprint. Listo para ser entregado.</p>
+                        </div>
+                        <span class="scrum-arrow">→</span>
+                        <div class="scrum-phase">
+                            <h5>5. Sprint Review</h5>
+                            <p>El equipo demuestra el Incremento a los stakeholders para obtener feedback.</p>
+                        </div>
+                        <span class="scrum-arrow">→</span>
+                        <div class="scrum-phase">
+                            <h5>6. Sprint Retrospective</h5>
+                            <p>El equipo reflexiona sobre el Sprint para identificar mejoras en procesos y herramientas.</p>
+                        </div>
+                    </div>
+                    <div class="cycle-arrow">Mejora Continua y Próximo Sprint</div>
+                </div>
+                </div>
+        </section>
+
+        <section id="simbolo" class="section container">
+            <div class="center-title">
+                <h2 class="section-title">Elemento Simbólico</h2>
+            </div>
+            
+            <img src="Imagen1.png" alt="Logo Reborn VR" class="symbol-logo">
+            
+            <h3>"La Insignia del Renacimiento Digital"</h3>
+            <p><strong>Significado:</strong> "Esta insignia representa la convergencia perfecta entre la tecnología de vanguardia (RV e IA) y el propósito humanitario (la recuperación)".</p>
+            <p class="vision"><strong>Visión:</strong> "Proyectamos que Reborn VR se convierta en el estándar de oro de la rehabilitación a nivel mundial. Al invertir en Reborn VR, invierte en el futuro de la salud y la movilidad humana."</p>
+            <p class="vision">Reborn VR: La Tecnología al Servicio de la Recuperación y Terapia sin Límites.</p>
+
+            <img src="Imagen5.png" alt="Terapia Reborn VR" class="final-image">
+            <p class="final-quote">"Cuando la terapia deja de ser una obligación y se convierte en propósito, el espíritu encuentra la fuerza para renacer."</p>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 - Team Brigada Reborn (Reborn VR)</p>
+        <p>María Castro | Yosue Piña | Luis Segovia</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('.section');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.6 
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href').substring(1) === entry.target.id) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+
+</body>
+</html>
